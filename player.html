@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Test API</title>
+    <script src="socket.io.js"></script>
+    <style type="text/css">
+        br {
+            display: block;
+            margin: 10 0;
+            content: " ";
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Status</h2>
+    <p>Socket Status: <label id="socket-status" style="color: red" >N/A</label></p>
+    <p>Joined Game Status: <label id="joingame-status" style="color: red">N/A</label></p>
+    <p>TickTack Game Status: <label id="ticktack-status" style="color: red">N/A</label></p>
+    <p>Moving Status: <label id="moving-status" style="color: red">false</label></p>
+    <p>Stage: <label id="stage-status" style="color: red">N/A</label></p>
+
+    <h2>Login</h2>
+    <label for="codefest-game-id">Game id:</label>
+    <input type="text" id="codefest-game-id">
+    <br>
+    <label for="codefest-player-id">Player id:</label>
+    <input type="text" id="codefest-player-id">
+    <br>
+    <button onclick="joinGame()">Login</button>
+    <h2>Utils</h2>
+    <button onclick="is_moving = false;">Reset</button>
+    <button onclick="pause_bot()">Pause</button>
+    <button onclick="resume_bot()">Resume</button>
+    <br>
+    <input type="number" id="box-factor">
+    <button onclick="setBox()">Set box</button>
+    <br>
+    <input type="number" id="speed">
+    <button onclick="setSpeed()">Set speed</button>
+    <br>
+    <button onclick="stageOne()">Stage 1</button>
+    <button onclick="stageTwo()">Stage 2</button>
+    <script src="auto.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
